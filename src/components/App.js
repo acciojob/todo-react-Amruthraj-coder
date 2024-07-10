@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 const Element = ({ value, id, handleDelete }) => {
   return (
-    <div>
+    <ul>
       <span>{value}</span>
       <button onClick={() => handleDelete(id)}>delete</button>
-    </div>
+    </ul>
   );
 };
 
