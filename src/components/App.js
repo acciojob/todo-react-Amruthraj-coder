@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 const Element = ({ value, id, handleDelete }) => {
   return (
-    <ul>
+    <li>
       <span>{value}</span>
       <button onClick={() => handleDelete(id)}>delete</button>
-    </ul>
+    </li>
   );
 };
 
@@ -32,7 +32,7 @@ const Todo = () => {
       <h1>To-Do List</h1>
       <input value={value} onChange={(e) => setValue(e.target.value)} />
       <button onClick={handleAddTodo}>Add To-do</button>
-      <div>
+      <ul>
         {todos.map((todo) => (
           <Element
             key={todo.id}
@@ -41,7 +41,7 @@ const Todo = () => {
             handleDelete={handleDeleteTodo}
           />
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
